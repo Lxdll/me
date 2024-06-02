@@ -42,4 +42,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          build_dir: ./dist
+          artifact_name: ./dist
