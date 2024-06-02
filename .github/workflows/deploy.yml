@@ -28,10 +28,13 @@ jobs:
           path: dist
 
   deploy:
-    runs-on: ubuntu-latest
+    environment:
+      name: me
+      url: ${{ steps.deployment.outputs.page_url }}
     needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
     steps:
-      - uses: actions/download-artifact@v2
-        with:
-          name: dist
-          path: dist
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
