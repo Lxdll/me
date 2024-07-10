@@ -1,2 +1,4 @@
-##
-react + vite + unocss + zustand starter
+# Start
+```bash
+degit Lxdll/starter-ts new-project-name
+```

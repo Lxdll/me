@@ -1,9 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import unocss from 'unocss/vite'
 
-// https://vitejs.dev/config/
+/** @type {import 'vite'.UserConfig} */
 export default defineConfig({
-  plugins: [react(), unocss()],
-  base: './'
+  plugins: [react()],
 })
