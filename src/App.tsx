@@ -1,9 +1,16 @@
+import BranchBackground from './components/Background';
+import NavBar from '@/components/NavBar';
+import { useRoutes } from 'react-router';
+import routes from '~react-pages';
+
 function App() {
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center text-white">
-      陈建茹是个傻瓜
-    </div>
-  )
+    <>
+      <BranchBackground />
+      <NavBar />
+      {useRoutes(routes)}
+    </>
+  );
 }
 
-export default App
+export default App;

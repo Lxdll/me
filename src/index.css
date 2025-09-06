@@ -1,9 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* @import "tailwindcss/preflight"; */
+
+@layer base {
+  h6 {
+    font-size: 0.67em;
+  }
+}
 
 body {
-  background-color: black;
+  /* background-color: black; */
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -13,4 +19,22 @@ body {
 #root {
   width: 100%;
   height: 100%;
+}
+
+.nav a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s ease;
+  opacity: 0.6;
+  outline: none;
+}
+
+.nav a:hover {
+  opacity: 1;
+  text-decoration-color: inherit;
+}
+
+pre span.line {
+  display: block;
 }
