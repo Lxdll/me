@@ -9,6 +9,7 @@ import { Post } from '@/type';
 import { getYear, isFuture, isSameGroup } from '@/utils/date';
 import React from 'react';
 import dayjs from 'dayjs';
+import Feature from './Feature';
 // import { SafeLink } from './SafeLink';
 
 export default function ListPosts() {
@@ -22,7 +23,17 @@ export default function ListPosts() {
     .filter((r) => r.path && r.path.startsWith('posts'))
     .map((i) => i.children || [])
     .flat()
-    .filter((i) => i.path)
+    .filter((i) => i.path);
+
+  const dirs = posts.filter((i) => i.path && !i.element);
+  console.log(
+    '%c [ dirs ]',
+    'font-size:13px; background:pink; color:#bf2c9f;',
+    dirs
+  );
+
+  const realPosts = posts
+    .filter((i) => i.path && i.element)
     .map((item) => ({
       path: item.frontmatter?.redirect || item.path || '',
       title: item.frontmatter?.title,
@@ -49,7 +60,10 @@ export default function ListPosts() {
 
   return (
     <div>
-      {posts.map((post, index) => {
+      {/* 专栏 */}
+      <Feature dirs={dirs} />
+
+      {realPosts.map((post, index) => {
         const isExternal = post.path.includes('://');
 
         const groupNode = (
@@ -114,7 +128,7 @@ export default function ListPosts() {
           );
         }
 
-        if (!isSameGroup(post, posts[index - 1])) {
+        if (!isSameGroup(post, realPosts[index - 1])) {
           renderNode = (
             <>
               {groupNode}

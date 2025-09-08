@@ -1,3 +1,5 @@
+import { NonIndexRouteObject } from 'react-router-dom';
+
 export type Frontmatter = {
   [key: string]: string;
 };
@@ -16,4 +18,9 @@ export type Post = {
   video?: boolean;
   inperson?: boolean;
   redirect?: string;
+};
+
+export type RouteItem = Omit<NonIndexRouteObject, 'children'> & {
+  frontmatter: Record<string, string>;
+  children: RouteItem[];
 };
