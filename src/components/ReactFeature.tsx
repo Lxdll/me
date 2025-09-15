@@ -33,7 +33,11 @@ export default function ReactFeature(props: ReactFeatureProps) {
 
   return _p.map(({ title, path }) => {
     return (
-      <a className="cursor-pointer" href={`${featurePath}/${path}`} key={path}>
+      <a
+        className="block w-fit cursor-pointer"
+        href={`${featurePath}/${path}`}
+        key={path}
+      >
         {title}
       </a>
     );

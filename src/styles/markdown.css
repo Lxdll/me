@@ -276,6 +276,12 @@ h6:focus .header-anchor {
   padding: 0px 24px;
 }
 
+.prose .shiki code .line {
+  display: block;
+  white-space: pre;
+  min-height: 1em;
+}
+
 .prose .shiki.has-highlighted .line:not(.highlighted) {
   opacity: 0.75;
 }
