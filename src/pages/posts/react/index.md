@@ -2,4 +2,4 @@
 title: 'React 专栏'
 ---
 
-<ReactFeature featurePath="react" />
+<FeatureList featurePath="react" />

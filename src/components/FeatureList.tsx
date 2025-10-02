@@ -5,11 +5,11 @@
 
 import routes from '~react-pages';
 
-interface ReactFeatureProps {
+interface FeatureListProps {
   featurePath: string;
 }
 
-export default function ReactFeature(props: ReactFeatureProps) {
+export default function FeatureList(props: FeatureListProps) {
   const { featurePath } = props;
 
   const posts = (routes.filter((i) => i.path === 'posts') || []).flatMap(
