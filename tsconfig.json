@@ -26,12 +26,17 @@
       "@/*": [
         "src/*"
       ]
-    }
+    },
   },
   "include": [
     "src",
     "vite-env.d.ts",
-    "vite.d.ts"
+    "vite.d.ts",
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/**/*.d.ts"
   ],
   "references": [
     {
