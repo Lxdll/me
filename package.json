@@ -54,7 +54,6 @@
     "vite-plugin-inspect": "^11.3.0",
     "vite-plugin-markdown-react": "^0.0.2",
     "vite-plugin-pages": "^0.33.1",
-    "vite-plugin-react-markdown": "^0.2.10",
     "vite-plugin-svgr": "^4.3.0"
   }
 }

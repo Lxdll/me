@@ -6,10 +6,8 @@ import matter from 'gray-matter';
 import fs from 'fs-extra';
 import AutoImport from 'unplugin-auto-import/vite';
 import Inspect from 'vite-plugin-inspect';
-// import ReactMarkdownPlugin from 'vite-plugin-react-markdown';
 import Pages from 'vite-plugin-pages';
 import fg, { Pattern } from 'fast-glob';
-// import MyPlugin from '@lxdll/vite-plugin-react-markdown';
 import MarkdownItShiki from '@shikijs/markdown-it';
 import {
   transformerNotationDiff,
